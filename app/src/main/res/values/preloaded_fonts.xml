@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abhaya_libre</item>
+        <item>@font/abril_fatface</item>
+        <item>@font/amaranth</item>
+        <item>@font/angkor</item>
+        <item>@font/arbutus_slab</item>
+        <item>@font/bad_script</item>
+        <item>@font/baloo_bhai</item>
+        <item>@font/pinyon_script</item>
+        <item>@font/ramabhadra</item>
+    </array>
+</resources>

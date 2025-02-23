@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <string name="mi_nombre">Pedri</string>
+    <string name="registro">Registrate</string>
+    <string name="texto_introductrio">Inicia una nueva aventura con MusicApp y descubre una nueva forma de ver el mundo</string>
+    <string name="comienza">Comienza</string>
+    <string name="texto_bienvenida_login">La aventura está por iniciar, por favor inicia sesión</string>
+    <string name="ingresar">Ingresar</string>
+</resources>
