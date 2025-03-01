@@ -10,16 +10,15 @@
         android:layout_width="281dp"
         android:layout_height="66dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="588dp"
+        android:layout_marginTop="572dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginBottom="93dp"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Icono de Google -->
         <ImageView
             android:id="@+id/imgGoogleIcon"
             android:layout_width="24dp"
@@ -29,62 +28,59 @@
             android:layout_marginStart="12dp"
             android:src="@drawable/google_logo" />
 
-        <!-- Botón de inicio de sesión con Google -->
         <Button
             android:id="@+id/btnGoogleLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/imgGoogleIcon"
             android:background="@android:color/transparent"
             android:fontFamily="@font/abhaya_libre"
-            android:gravity="center"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="Ingresa con Google"
-            android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <!-- Campo de usuario -->
     <EditText
         android:id="@+id/edtUsername"
         style="@style/EditTextPink"
         android:layout_width="271dp"
         android:layout_height="43dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="395dp"
         android:ems="10"
         android:inputType="text"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Campo de contraseña -->
     <EditText
         android:id="@+id/edtPassword"
         style="@style/EditTextPink"
         android:layout_width="271dp"
         android:layout_height="43dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="344dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Logo de la aplicación -->
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="168dp"
@@ -94,18 +90,18 @@
         android:layout_marginBottom="588dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_8__1_" />
 
-    <!-- Botón de inicio de sesión -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="409dp"
-        android:layout_marginBottom="272dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="445dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="236dp"
         android:backgroundTint="@color/pink"
         android:fontFamily="@font/abhaya_libre"
         android:text="Ingresar"
@@ -114,29 +110,28 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Enlace para recuperar contraseña -->
     <TextView
         android:id="@+id/txtRecoverPassword"
         android:layout_width="237dp"
         android:layout_height="25dp"
-        android:layout_marginTop="475dp"
-        android:layout_marginBottom="231dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="176dp"
         android:fontFamily="@font/abhaya_libre"
         android:text="Recupera Tu Contraseña"
         android:textAlignment="center"
+        android:textColor="@color/pink"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Pregunta sobre cuenta existente -->
     <TextView
         android:id="@+id/txtNoAccount"
         android:layout_width="wrap_content"
@@ -155,14 +150,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Enlace para registrarse -->
     <TextView
         android:id="@+id/txtRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="231dp"
+        android:layout_marginStart="232dp"
         android:layout_marginTop="670dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="95dp"
         android:layout_marginBottom="37dp"
         android:fontFamily="@font/abhaya_libre"
         android:text="Regístrate"
@@ -175,33 +169,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Nombre de la aplicación -->
     <TextView
         android:id="@+id/txtAppName"
-        android:layout_width="117dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="634dp"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="628dp"
         android:fontFamily="@font/abhaya_libre"
         android:text="OneMusic"
-        android:textSize="26sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Mensaje de bienvenida -->
     <TextView
         android:id="@+id/txtWelcomeMessage"
         android:layout_width="270dp"
         android:layout_height="58dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginBottom="521dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="496dp"
         android:text="La aventura está por iniciar, por favor inicia sesión"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -211,15 +203,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Iconos decorativos -->
     <ImageView
         android:id="@+id/imgDecorativeIcons"
         android:layout_width="45dp"
         android:layout_height="169dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="327dp"
-        android:layout_marginBottom="366dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="302dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
