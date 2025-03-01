@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        Log.d(TAG, "onCreate called")
+        Log.d("LoginActivity", "onCreate called")
 
         initializeViews()
         sharedPreferences = getSharedPreferences("userData", MODE_PRIVATE)
@@ -57,16 +57,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun onLoginClicked() {
-        val username = edtUsername.text.toString().trim()
+        val email = edtUsername.text.toString().trim()
         val passwordInput = edtPassword.text.toString().trim()
 
-        if (username.isEmpty() || passwordInput.isEmpty()) {
+        if (email.isEmpty() || passwordInput.isEmpty()) {
             Toast.makeText(this, "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Recuperamos los datos guardados en SharedPreferences
-        val email = sharedPreferences.getString("Email", null)
+        val emaiL = sharedPreferences.getString("Email", null)
         val phone = sharedPreferences.getString("Phone", null)
         val password = sharedPreferences.getString("Password", null)
         val firstName = sharedPreferences.getString("FirstName", null)
@@ -74,11 +73,10 @@ class LoginActivity : AppCompatActivity() {
 
         Log.d(TAG, "Datos recuperados: Email=$email, Phone=$phone, Password=$password")
 
-        if ((username == email || username == phone) && passwordInput == password) {
+        if ((email == emaiL) && passwordInput == password) {
             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
             Log.d(TAG, "Usuario inició sesión correctamente")
 
-            // Redirigimos al perfil
             val profileIntent = Intent(this, ProfileActivity::class.java).apply {
                 putExtra("FirstName", firstName)
                 putExtra("LastName", lastName)
@@ -96,17 +94,21 @@ class LoginActivity : AppCompatActivity() {
         Log.d(TAG, "Redirigiendo a recuperar contraseña")
         val recoverIntent = Intent(this, PasswordRecoveryActivity::class.java)
         startActivity(recoverIntent)
+        finish()
     }
 
     private fun redirectToRegister() {
         Log.d(TAG, "Redirigiendo a registro")
         val registerIntent = Intent(this, RegisterActivity::class.java)
         startActivity(registerIntent)
+        finish()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "onDestroy called")
+        val sharedPref = getSharedPreferences("userData", MODE_PRIVATE)
+        sharedPref.edit().clear().apply()
+        Log.d(TAG, "SharedPreferences borradas automáticamente")
     }
 }
 

@@ -63,13 +63,12 @@ class RegisterActivity : AppCompatActivity() {
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
             Log.d(TAG, "Usuario registrado correctamente")
 
-            // Guardamos los datos con SharedPreferences
             saveUserData(firstName, lastName, email, phone, password)
 
-            // Redireccionamos al Login
             val loginIntent = Intent(this, LoginActivity::class.java)
             startActivity(loginIntent)
             finish()
+
         }
     }
 
@@ -85,6 +84,17 @@ class RegisterActivity : AppCompatActivity() {
         editor.apply() // Guarda los datos
 
         Log.d(TAG, "Datos guardados en SharedPreferences")
+        val firstName = sharedPref.getString("FirstName", "No hay nombre")
+        val lastName = sharedPref.getString("LastName", "No hay apellido")
+        val email = sharedPref.getString("Email", "No hay email")
+        val phone = sharedPref.getString("Phone", "No hay teléfono")
+        val password = sharedPref.getString("Password", "No hay contraseña")
+        Log.d(TAG, "Nombre: $firstName")
+        Log.d(TAG, "Apellido: $lastName")
+        Log.d(TAG, "Email: $email")
+        Log.d(TAG, "Teléfono: $phone")
+        Log.d(TAG, "Password: $password")
+
     }
 
     private fun validateInputs(
@@ -118,11 +128,12 @@ class RegisterActivity : AppCompatActivity() {
         Log.d(TAG, "Redirigiendo al Login")
         val loginIntent = Intent(this, LoginActivity::class.java)
         startActivity(loginIntent)
-        finish()
     }
 
-    override fun onDestroy() {
+    /*override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "onDestroy called")
-    }
+        val sharedPref = getSharedPreferences("userData", MODE_PRIVATE)
+        sharedPref.edit().clear().apply()
+        Log.d(TAG, "SharedPreferences borradas automáticamente")
+    }*/
 }
